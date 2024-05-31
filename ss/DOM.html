@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+   <img id="h1" src="C:\Users\xiazi\Desktop\js\屏幕截图 2023-09-28 121201.png"> <br><br>
+   <div class="cls">传承</div> <br>
+   <div class="cls">ak</div> <br>
+
+   <input type="checkbox" name="hobby">电影
+   <input type="checkbox" name="hobby">旅游
+   <input type="checkbox" name="hobby">游戏
+  
+</body>
+
+<script>
+    //DOM 文档对象模型
+    //Document:整个文档对象，Element:元素对象，Attribute:属性对象，Text:文本对象，Comment:注释对象
+    //HTML中的Element对象可以通过Document对象获取
+    //根据id属性值获取，返回单个Element对象
+    var img = document.getElementById('h1');
+    alert(img);
+    //根据标签名称获取，返回Element对象数组
+    var divs = document.getElementsByTagName('div');
+    for (let i = 0; i < divs.length; i++) {
+        alert(divs[i]);
+    }
+    //根据name属性值获取，返回Element对象数组
+    var ins = document.getElementsByName('hobby');
+    for (let i = 0; i < ins.length; i++) {
+        alert(ins[i]);
+    }
+    //根据class属性值获取，返回Element对象数组
+    var clss = document.getElementsByClassName('cls');
+    for (let i = 0; i < clss.length; i++) {
+        alert(clss[i]);
+    }
+    //查询参考手册，属性、方法
+    var d = document.getElementsByClassName('cls');
+    var d1 = d[0];
+    //更改内容
+    d1.innerHTML = "chuan"
+
+    </script>
+</html>
