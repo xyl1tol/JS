@@ -7,8 +7,23 @@
     <script src="../ni/vue.js"></script>
 </head>
 <body>
-    <script>
-        //常见指令  
-    </script>
+    <div id="app">
+        <!--v-bind 为HTML标签绑定属性值,如设置href,css样式等-->
+        <a v-bind:href="url">链接1</a>
+        <a :href="url">链接2</a>
+        <!--v-model-->
+        <input type="text" v-model="url">
+        <!--v-on-->
+        <input type="button" value="点一下" v-on:click="handle()">
+    </div>
 </body>
+<script>
+    new Vue({
+        el:"#app",//vue监管的区域
+        data:{
+            url:"https://www.baidu.com"
+        },
+        methods
+    })
+</script>
 </html>
