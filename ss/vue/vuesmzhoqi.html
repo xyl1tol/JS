@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../ni/vue.js"></script>
+</head>
+<body>
+<div id="app">
+
+</div>
+</body>
+<script>
+    //vue的生命周期  每触发一个生命周期事件，会自动执行一个生命周期的方法（钩子）
+    //beforeCreate 创建前
+    //created 创建后 
+    //beforeMount 载入前 
+    //mounted 挂载完成(只需要掌握这一个）
+    //beforeUpdate 更新前 
+    //updated 更新后
+    //beforeDestroy 销毁前
+    //destroyed 销毁后
+    new Vue({
+        el:"#app",
+    data :{
+
+    },
+    methods: {
+    },
+    mounted () {
+        alert("vue挂载完成")
+    }
+    })
+       </script>
+</html>
